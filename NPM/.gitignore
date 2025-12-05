@@ -1,0 +1,5 @@
+node_modules/
+catatan.txt
+package-lock.json
+index.js
+package.json
