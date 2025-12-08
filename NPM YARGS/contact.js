@@ -1,8 +1,6 @@
 const fs = require('fs');
 
 const foldering = function() {
-    
-
     const dirPath = './data';
     if (!fs.existsSync(dirPath)){
         fs.mkdirSync(dirPath);
