@@ -1,0 +1,14 @@
+<h2>form edit <%= contact.name %> </h2>
+
+<form action="/contact/form-edit" method="post">
+    <input name="prevName" type="hidden" value="<%= (contact.prevName) ? contact.prevName : contact.name %>"><br><br>
+
+    <label for="name">Nama Lengkap</label><br>
+    <input name="name" type="text" required value="<%= contact.name %>"><br><br>
+    <label for="email">Email</label><br>
+    <input name="email" type="text" required value="<%= contact.email %>"><br><br>
+    <label for="mobile">Mobile</label><br>
+    <input name="mobile" type="text" required value="<%= contact.mobile %>"><br><br>
+
+    <button type="submit"> edit </button>
+</form>

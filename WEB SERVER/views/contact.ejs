@@ -1,0 +1,40 @@
+
+        <% if (contacts.length < 1 ) { %>
+        <p>contact data is empty</p>
+        <% }  else { %>
+<div class="container mt-5">
+  <div class="card shadow-sm rounded-4">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="fw-bold mb-0">📋 Data Contacts</h4>
+            <a href="/form-add" class="btn btn-primary btn-sm">+ Tambah Data</a>
+        </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr style="text-align: center;">
+                            <th>name</th>
+                            <th>mobile</th>
+                            <th>detail</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% contacts.forEach(i => { %>
+                            <tr>
+                                <td class="text-center"><%= i.name %></td>
+                                <td class="text-center"><%= i.mobile %></td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning btn-sm"><a href="/contact/<%= i.name %>">detail</a></button>
+                                </td>
+                                
+                            
+                            </tr>
+                            <% }) %>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

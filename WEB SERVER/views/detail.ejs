@@ -1,0 +1,10 @@
+<div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">DETAIL CONTACT</div>
+  <div class="card-body">
+    <h5 class="card-title"><%= contact.name %></h5>
+    <p class="card-text"><%= contact.email %></p>
+    <p class="card-text"><%= contact.mobile %></p>
+    <a class="btn btn-danger" onclick="return confirm('yakin nich')" href="/contact/delete/<%= contact.name %>">hapus</a>
+    <a class="btn btn-warning" href="/contact/form-edit/<%= contact.name %>">edit</a>
+  </div>
+</div>
