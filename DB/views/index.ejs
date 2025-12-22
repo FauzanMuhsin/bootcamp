@@ -1,0 +1,27 @@
+    <h1>web server node js</h1>
+    <p>welcome to my page</p>
+
+    <h2>contact</h2>
+    <% if (contacts.length < 1 ) { %>
+     <p>contact data is empty</p>
+    <% }  else { %>
+
+<table class="table table-bordered border-dark table-md">
+    <thead>
+        <tr style="text-align: center;">
+            <th>name</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% contacts.forEach(i => { %>
+        <tr>
+                <td><%= i.name %></td>
+                <td><%= i.email %></td>
+        
+            </tr>
+            <% }) %>
+            <% } %>
+    </tbody>
+    </table>
+<!-- sebelumnya menggunakan include -->

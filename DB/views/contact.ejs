@@ -1,0 +1,33 @@
+        <h1>hello world</h1>
+        <p>welcome to contact page</p>
+
+        <a href="/form-add">add</a>
+
+        <h2>contact</h2>
+
+        <% if (contacts.length < 1 ) { %>
+        <p>contact data is empty</p>
+        <% }  else { %>
+
+    <table class="table table-bordered border-dark table-md">
+        <thead>
+            <tr style="text-align: center;">
+                <th>name</th>
+                <th>mobile</th>
+                <th>hapus</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% contacts.forEach(i => { %>
+                <tr>
+                    <td><%= i.name %></td>
+                    <td><%= i.mobile %></td>
+                    <td>
+                        <button><a href="/contact/delete/<%= i.name %>">hapus</a></button>
+                    </td>
+                </tr>
+                <% }) %>
+                <% } %>
+        </tbody>
+        </table>
