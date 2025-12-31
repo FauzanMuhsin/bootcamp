@@ -1,0 +1,19 @@
+.image-list{
+    min-width: 180px !important;
+    height: 300px !important;
+    border-radius: 15px !important;
+    padding: 10px !important;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    gap: 10px;
+    padding: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
